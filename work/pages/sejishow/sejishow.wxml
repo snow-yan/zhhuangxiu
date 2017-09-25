@@ -1,0 +1,69 @@
+<!--sejishow.wxml-->
+<view class="container">
+  <view class="top">
+    <view class="card">
+      <view class="card_name">{{showList.title}}</view>
+      <view class="card_pro">
+          <view class="city">公司:<text>{{showList.city}}</text>  案例户型:<text>{{showList.door}}</text> 面积:<text>{{showList.area}}</text></view>
+          <view class="city">楼盘:<text>{{showList.building}}</text>  风格:<text>{{showList.styles}}</text></view>
+      </view>
+    </view>    
+  </view>
+  <view class="avator">
+      <image src="{{showList.icon}}" class="image"></image>
+      <view class="name">{{showList.name}}</view>
+      <view class="yuyue" bindtap="clickAlert">预约设计</view>
+  </view>
+  <view class="home">
+    <block wx:for="{{showList.biginfo}}" wx:key="{{index}}">  
+       <image src="{{item.index2}}" class="img"></image> 
+       <view class="floor">{{item.index}}</view>      
+    </block>    
+  </view>
+  <view style="height:71px;"></view>
+  <view class="footer">
+  <navigator url="/pages/anli/anli?style={{showList.styles}}">
+        <view class="footer_list">
+          <image src="../image/fg.png" class="fg"></image>
+          <view class="fengge">该风格其他案例</view>
+        </view>
+  </navigator>
+   <navigator url="/pages/anli/anli?build={{showList.building}}"> 
+    <view class="footer_list">
+      <image src="../image/loupan.png" class="fg"></image>
+      <view class="fengge">该楼盘其他案例</view>
+    </view>
+   </navigator> 
+    <navigator url="/pages/anli/anli?door={{showList.door}}">  
+    <view class="footer_list">
+      <image src="../image/huxing.png" class="fg"></image>
+      <view class="fengge">该户型其他案例</view>
+    </view>   
+    </navigator>      
+   </view>
+</view>
+<!-- 弹窗 -->
+<view class="alert_back" wx:if="{{s==5}}">
+  <view class="alert_box">
+    <view class="price">
+       <view class="">预约设计  </view> 
+         <image src="../image/close.png" class="close" bindtap="closeAlert"> </image>
+    </view>   
+    <form bindsubmit="formSubmit">
+      <input class="inputV" placeholder="联系人" name="name"/>
+      <input class="inputV" placeholder="联系电话" name="telPhone" />
+      <input class="inputV" placeholder="楼盘名称" name="loupan"/>
+      <input class="inputV area" placeholder="建筑面积" name="mianji" /> 
+      <button class="yuyues"  formType="submit">预约设计</button> 
+    </form>
+    <view class="alert_foot">
+      <view >
+        免费电话报价：
+        <text style="font-size:14px;" bindtap="telPhone">{{tel}}</text>
+      </view>
+      <view >
+        已有<text >{{count}}</text>位业主成功获取报价    
+      </view>  
+    </view>
+  </view>
+</view>

@@ -1,0 +1,78 @@
+<!--team.wxml-->
+
+<view class="container">
+  <view class="header">  
+        <view class="chance  {{sortindex==index?'active':''}}" wx:for="{{head}}" wx:key="{{index}}" bindtap="setTab" data-id="{{index}}" >{{item}}<view class="jiantou"></view></view>
+    </view>
+    <view class="header_hidden" wx:if="{{showfilter}}">
+      <view class="hid_list"  wx:if="{{showfilterindex==0}}">
+        <block wx:for="{{citys}}" wx:key="{{index}}">
+          <view class="hidd {{sortsx==index?'active':''}}" data-key="{{index}}" data-name="{{item}}" bindtap="click_sx" >{{item}}</view>
+        </block>  
+      </view>
+      <view class="hid_list" wx:if="{{showfilterindex==1}}">        
+        <block wx:for="{{styles}}" wx:key="{{index}}">
+          <view class="hidd {{sortsx1==index?'active':''}}" data-key="{{index}}" data-name="{{item}}" bindtap="click_sx1" >{{item}}</view>
+        </block>
+      </view>
+      <view class="hid_list" wx:if="{{showfilterindex==2}}">
+        <block wx:for="{{sex}}" wx:key="{{index}}">
+          <view class="hidd {{sortsx2==index?'active':''}}" data-key="{{index}}" data-name="{{item}}" bindtap="click_sx2" >{{item}}</view>
+        </block>
+      </view>   
+    </view>
+    <view style="height:34px;"></view>
+  <view class="containbox">
+    <block wx:for="{{teamer}}" wx:key="{{index}}" >    
+      <view class="contain">
+        <navigator url="/pages/designer/designer?id={{item.id}}">
+          <view class="bac_img" style="background-image:url({{item.img}});"></view>
+          <!-- <image src="{{item.img}}"></image>  -->
+        </navigator>      
+        <view class="content">
+          <view class="name">{{item.title}}</view>
+          <view class="jianjie">
+            <view class="zuoping">代表作品:<text style="color:#000">{{item.count}}</text>套</view>
+            <view class="jingyan">从业经验:<text style="color:#000">{{item.author}}</text>年</view>
+          </view>
+          <view class="jieshao">
+            <view class="city">公司：{{item.city}}</view>
+            <view class="num">浏览次数：<text style="color:#000">{{item.view}}</text>次</view>
+          </view>
+          <view class="mianfei">
+            <view class="zixun" bindtap="telPhone">免费咨询</view>
+            <view class="guihua" bindtap="alertbox">免费规划</view>
+          </view>
+        </view>
+      </view>
+    </block>
+    
+   
+  </view>
+</view>
+<!-- 弹窗 -->
+<view class="alert_back" wx:if="{{s==5}}">
+  <view class="alert_box">
+    <view class="price">
+       <view class="">预约设计  </view> 
+         <image src="../image/close.png" class="close" bindtap="closeAlert"> </image>
+    </view>   
+    <form bindsubmit="formSubmit">
+      <input class="inputV" placeholder="联系人" name="name"/>
+      <input class="inputV" placeholder="联系电话" name="telPhone" />
+      <input class="inputV" placeholder="楼盘名称" name="loupan"/>
+      <input class="inputV area" placeholder="建筑面积" name="mianji" /> 
+      <button class="yuyues"  formType="submit">预约他</button> 
+    </form>
+    <view class="alert_foot">
+      <view >
+        免费电话报价：
+        <text style="font-size:14px;" bindtap="telPhone">{{tel}}</text>
+      </view>
+      <view >
+        已有<text >{{count}}</text>位业主成功获取报价    
+      </view>  
+    </view>
+  </view>
+</view>
+

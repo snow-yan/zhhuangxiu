@@ -1,0 +1,52 @@
+{
+  "pages": [
+    
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/team/team",
+    "pages/price/price",
+    "pages/sejishow/sejishow",
+    
+    "pages/designer/designer",
+    "pages/anli/anli"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "十大装修品牌",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh":"true"
+    
+  },
+  "tabBar": {
+    "borderStyle": "white",
+    "selectedColor": "#12B2B2",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "pages/image/index.png",
+        "selectedIconPath": "pages/image/indexnew.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "品牌公司",
+        "iconPath": "pages/image/tu.png",
+        "selectedIconPath": "pages/image/tunew.png"
+      },
+      {
+        "pagePath": "pages/team/team",
+        "text": "设计团队",
+        "iconPath": "pages/image/team.png",
+        "selectedIconPath": "pages/image/teamnew.png"
+      },
+      {
+        "pagePath": "pages/price/price",
+        "text": "装修报价",
+        "iconPath": "pages/image/price.png",
+        "selectedIconPath": "pages/image/pricenew.png"
+      }
+    ]
+  }
+}

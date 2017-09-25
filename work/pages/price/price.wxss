@@ -1,0 +1,58 @@
+/* price.wxss */
+.price{
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  color: #00ACAC;
+  font-size: 20px;
+}
+.inputV{ 
+  width: 70%;
+  border: 1px solid #B0B0B0;
+  margin: 0 auto;
+  padding:8px 10px;
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+.area{
+  position: relative;
+}
+.area::after{
+  content: '㎡';
+   position: absolute; 
+   top: 0;
+   bottom: 0;
+   right: 10px;
+   margin: auto;
+   display: block;
+   height: 20px;
+   line-height: 20px;
+   font-size: 14px;
+   color: #B0B0B0;
+
+  
+}
+.huoqu{
+  width: 70%;
+  margin: 0 auto;
+  height: 30px;
+  background: #12B2B2;
+  text-align: center;
+  line-height: 30px;
+  color: #fff;
+  padding: 15rpx 10px;
+  box-sizing: content-box;
+}
+.footer{
+  width: 70%;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+.footer view{
+  line-height: 20px;
+  font-size:12px;margin-bottom:20px;
+}
+.footer view text{
+  color:#12B2B2;
+
+}

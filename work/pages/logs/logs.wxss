@@ -1,0 +1,15 @@
+.header{ 
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  background: #fff;  
+  z-index: 10000;
+}
+.header_hidden  .hid_list .active{
+  border: 1px solid #12B2B2;
+  color: #12B2B2;
+}
+

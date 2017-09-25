@@ -1,0 +1,30 @@
+/* anli.wxss */
+.sousuo{
+padding: 10px 0;
+}
+.sousuo .sousuo_list{
+  width:90%; 
+  border: 1px solid #E0E0E0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  padding: 5px 10px;
+  box-sizing: border-box;  
+  position: relative;
+}
+.sousuo .sousuo_list .img{
+  width: 20px;height: 20px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 6%;
+  margin: auto;
+}
+.sousuo .sousuo_list input{
+  width: 85%;
+  border-right: 1px solid #E0E0E0;
+  line-height: 30px;
+  box-sizing: border-box;
+
+}

@@ -1,0 +1,170 @@
+/* sejishow.wxss */
+.top{
+  height: 90px;
+  background: #12B2B2;
+  position: relative;
+  padding: 30px 10px;
+  padding-bottom: 0;
+
+}
+.top .card{
+  position: absolute;
+  top: 30px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 90%;
+  height: 140px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 5px 5px #eee;
+  
+}
+.card_name{
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+}
+.card_pro {
+  font-size: 12px;
+  color: #A4A4A4;
+  text-align: center;
+}
+.card_pro .city{
+  margin-bottom: 10px;
+}
+.avator{
+  width: 100%;
+  
+}
+.avator .image{
+  display: block;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  position: relative;
+  z-index: 1000;
+  margin: 0 auto;
+  margin-top: 16px;
+}
+.avator .name{
+  margin-top: 10px;
+  text-align: center;
+  width: 100%;
+  font-size:12px;
+}
+
+.home .img{
+  width: 100%;
+  height: 180px;
+}
+.home .floor{
+  padding: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+.footer{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+}
+.footer navigator{
+  width: 33%;
+}
+.footer .footer_list{
+  width:100%;
+  background: #12B2B2;
+  padding: 10px 0;
+}
+.footer .footer_list .fg{
+  display: block;
+  margin: 0 auto;
+  width: 30px;
+  height: 30px;
+}
+.footer .footer_list .fengge{
+  color: #fff;
+  font-size: 12px;
+  width: 100%;
+  text-align: center;
+  padding-top: 5px;
+}
+/* 弹窗 */
+.alert_back{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1000000;
+}
+.alert_box{
+  width: 90%;
+  height: 65%; 
+  background: #fff;
+  position:fixed;
+  top: 50%;
+  left: 50%;
+   margin-top: -50%;
+   margin-left: -45%; 
+  border-radius: 5px;
+  z-index: 1000001;
+  
+}
+.alert_box .price{
+  padding:  4%;  
+  text-align: left; 
+  font-size: 16px;
+}
+.inputV{ 
+  width: 80%;
+  border: 1px solid #B0B0B0;
+  margin: 0 auto;
+  padding:2% 10px;
+  font-size: 14px;
+  margin-bottom: 4%;
+  height: 7%;
+}
+.huoqu{
+  width: 80%;
+  margin: 0 auto;
+  height: 8%;
+  background: #12B2B2;
+  text-align: center;
+  line-height: 8%;
+  color: #fff;
+  font-size: 14px;
+  padding: 5% 10px;
+  box-sizing: content-box;
+}
+.alert_foot{
+  width: 80%;
+  margin: 0 auto;
+  padding: 3% 10px;
+  text-align: center;
+  color: #A3A3A3;
+}
+.alert_foot view{
+  line-height: 15px;
+  font-size:12px;
+  margin-bottom:10rpx;
+}
+.alert_foot view text{
+  color:#12B2B2;
+
+}
+ .yuyues{
+  width: 80%;
+  margin: 0 auto;
+  background: #12B2B2;
+  text-align: center;
+  line-height: 24px; 
+  color: #fff;
+  padding: 10rpx 10px;
+  box-sizing: content-box;
+}

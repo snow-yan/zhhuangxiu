@@ -1,0 +1,55 @@
+<!--logs.wxml-->
+<view class="container">
+  <view class="header">  
+      <view wx:for="{{head}}" wx:key="{{index}}" class="chance  {{sortindex==index?'active':''}}"  bindtap="setTab" data-id="{{index}}" >{{item}}<view class="jiantou"></view></view>
+  </view>
+  <view class="header_hidden" wx:if="{{showfilter}}">
+    <view class="hid_list"  wx:if="{{showfilterindex==0}}">      
+      <block wx:for="{{citys}}" wx:key="{{index}}">
+        <view class="hidd {{sortsx==index?'active':''}}" data-key="{{index}}" data-name="{{item}}" bindtap="click_sx" >{{item}}</view>
+      </block>      
+    </view>     
+    <view class="hid_list" wx:if="{{showfilterindex==1}}">
+        <block wx:for="{{styles}}" wx:key="{{index}}" >
+          <view class="hidd {{sortsx1==index?'active':''}}" data-key="{{index}}" data-name="{{item}}" bindtap="click_sx1">{{item}}</view>
+        </block> 
+    </view>
+    <view class="hid_list" wx:if="{{showfilterindex==2}}">
+        <block wx:for="{{huxing}}" wx:key="{{index}}">
+            <view class="hidd {{sortsx2==index?'active':''}}" data-key="{{index}}" data-name="{{item}}" bindtap="click_sx2">{{item}}</view>
+        </block>  
+    </view>
+    <view class="hid_list hid_last" wx:if="{{showfilterindex==3}}">
+        <block wx:for="{{area}}" wx:key="{{index}}">
+          <view class="hidd {{sortsx3==index?'active':''}}" data-key="{{index}}" data-name="{{item}}" bindtap="click_sx3">{{item}}</view>
+        </block> 
+    </view>
+  </view>
+  <view style="height:35px;"></view>
+  <view class="box">
+    <block wx:for="{{list}}" wx:key="{{index}}">
+      <navigator url="/pages/sejishow/sejishow?id={{item.id}}">
+          <view class="box_list">
+            <view class="image" style="background-image:url({{item.img}})"></view>
+            <!-- <image src="{{item.img}}" class="image"></image> -->
+            <view class="produce">
+              <view class="pro_list1">
+                <image src="{{item.icon[0]}}" class="avator"></image>
+                <view class="name">{{item.name}}</view>
+              </view>
+              <view class="pro_list2">
+                <view class="jieshao1">
+                  <view>{{item.title}}</view>
+                  <view class="classname">
+                    <image src="../image/tupian.png" class="img"></image>
+                    <text>{{item.count}}</text>
+                  </view>            
+                </view>
+                <view class="jieshao2">公司：{{item.city}}   风格：{{item.styles}}  户型：{{item.door}}</view>
+              </view>
+            </view>
+          </view>  
+        </navigator>
+    </block>  
+  </view>
+</view>

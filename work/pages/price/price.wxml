@@ -1,0 +1,23 @@
+<!--price.wxml-->
+<view class="price">
+  装修报价
+</view>
+<form bindsubmit="formSubmit">
+  <input class="inputV" placeholder="联系人" name="name"/>
+  <input class="inputV" placeholder="联系电话" name="telPhone" />
+  <input class="inputV" placeholder="楼盘名称" name="loupan"/>
+  <input class="inputV area" placeholder="建筑面积" name="mianji" /> 
+  <button class="huoqu"  formType="submit">获取报价</button> 
+</form>
+<view class="footer">
+  <view >
+    免费电话报价：
+    <text style="font-size:18px;" bindtap="telPhone">{{tel}}</text>
+  </view>
+  <view >
+    已有<text >{{count}}</text>位业主成功获取报价    
+  </view>
+  <view style="">
+    装修<text >第一步</text>算算我家装修一共<text >需要花多少钱</text>    
+  </view>
+</view>

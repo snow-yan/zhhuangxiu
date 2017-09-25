@@ -1,0 +1,113 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="header">
+    <view class="logo">     
+      <image src="../image/logo.png" class="image"></image>  
+      <view class="areas " bindtap="getArea">{{head}}<view class="jiantou {{showfilterindex%2==1?'actives':''}}"></view></view>       
+    </view>
+    <view class="areasHid header_hidden" wx:if="{{showfilterindex%2==1}}">
+       <view class="hid_list"  >      
+          <block wx:for="{{citys}}" wx:key="{{index}}">
+            <view class="hidd {{sortsx==index?'active':''}}" data-key="{{index}}" data-name="{{item}}" bindtap="click_sx" >{{item}}</view>
+          </block>    
+        </view>
+    </view>
+    
+  </view>
+  <view style="height:70px;"></view>
+  
+<!-- banner轮播 -->
+  <swiper class="lunbo" indicator-dots="{{indicatorDots}}"  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-color="#82D2D2" indicator-active-color="#12B2B2">
+    <block wx:for="{{lunbo}}" wx:key="{{index}}">
+      <swiper-item>
+        <view class="slide-image" style="background-image:url({{item}})"></view>
+        <!-- <image src="{{item}}" class="slide-image" width="355" height="150"/>      -->
+      </swiper-item>
+    </block> 
+  </swiper>
+    <view id="kefu">
+       <!-- <contact-button 
+        type="default-light" 
+        size="24"       
+        class="kefu"
+      >     
+      </contact-button>      -->
+        <button open-type="contact" plain="true"  class="kefu">
+           <image src="../image/we.png" style="width:35px;height:35px;"></image> 
+          <!-- <view class="zixun"><text>微</text><text>信</text><text>咨</text><text>询</text> -->
+        <!-- </view> -->
+            
+        </button>
+        <view class="zixuns">微信咨询</view>
+        <!-- <view class="zixun"><text>微</text><text>信</text><text>咨</text><text>询</text> -->
+        <!-- </view> -->
+  </view>
+    <view class="form_list"> 
+     <view class="form">        
+        <form bindsubmit="formSubmit">
+          <input class="input" placeholder="您的姓名" name="name"/>
+          <input class="input" placeholder="您的电话" name="telPhone" />
+          <input class="input" placeholder="您家小区及房型" name="loupan"/>
+          <input class="input area" placeholder="您喜欢的风格" name="mianji" /> 
+          <button class="yuyues"  formType="submit" plain="true" style="background:#12B2B2;color:#fff;width:80%;">立即获取</button> 
+        </form>  
+       <view class="form_name">
+        <text>免费获取</text>
+          您家的设计方案
+      </view>     
+     </view> 
+   </view>  
+  <view class="anli">
+    <view class="jingdian">经典案例</view>    
+    <swiper class="swiper" indicator-dots="true" indicator-color="#82D2D2" indicator-active-color="#12B2B2" autoplay='true' > 
+      <block wx:for="{{anliS}}" wx:key="{{index}}">
+        <swiper-item>
+          <navigator url="/pages/sejishow/sejishow?id={{item.id}}">
+              <image src="{{item.img[0]}}" class="slide-image" width="355" height="150"/>  
+              <view class="lunbo_">{{item.title}}</view>
+              <view class="lunbo_s">公司:<text>{{item.city}}</text>  风格:<text>{{item.styles}}</text>  户型：{{item.door}}</view>
+          </navigator>                    
+        </swiper-item>
+      </block>  
+    </swiper> 
+  </view> 
+  <view style="height:20px;background-color:#F2F2F2;"></view>  
+  <view class="moreanli" >
+    <view class="more">
+      <navigator url="/pages/logs/logs" style="width:100%;height:100%;display:block;" open-type="switchTab">
+        查看更多案例
+    </navigator>
+    </view>
+    <view class="sheji">
+      设计团队
+    </view>
+  </view>
+  <view class="team_box">
+    <swiper class="team_lunbo" indicator-dots="true"  indicator-color="#82D2D2" indicator-active-color="#12B2B2" autoplay='true'>
+          <block wx:for="{{sheji}}" wx:key="{{index}}" >   
+              <swiper-item>
+                <block wx:for="{{item}}" wx:key="{{index}}">
+                    <navigator url="/pages/designer/designer?id={{item.id}}" class="team_list"> 
+                      <view class="lunbos">
+                        <view class="slide-image" style="background-image:url({{item.img}})"></view>
+                          <!-- <image src="../image/banner1.jpg" class="slide-image" width="355" height="150"/>      -->
+                          <view class="name">{{item.title}}</view>
+                          <view class="lunbo_">公司：<span>{{item.city }}</span>  代表作品：<span>{{item.count }}套</span></view>
+                      </view>
+                    </navigator>                      
+                </block>                    
+              </swiper-item>
+          </block>   
+      </swiper>    
+  </view> 
+  <view style="height:20px;background-color:#F2F2F2;"></view>
+  <view class="moreanli" >
+    <view class="more">
+    <navigator url="/pages/team/team" style="width:100%;height:100%;display:block;" open-type="switchTab">
+        查看更多案例
+    </navigator>
+    </view>    
+  </view>
+
+  
+</view>

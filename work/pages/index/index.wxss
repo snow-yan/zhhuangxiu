@@ -1,0 +1,254 @@
+/**index.wxss**/
+.container{
+  position: relative;
+}
+.header{ 
+   
+  height: 70px;  
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  background: #fff;  
+  z-index: 10000;
+}
+.header .logo{
+  display: flex;
+  justify-content: space-between; 
+  /* align-content: center; */
+  align-items: center;
+  height: 100%;
+  padding:0  20px; 
+  box-sizing: border-box;
+}
+.header .logo .image{
+  height: 80px;
+  width: 80px;
+}
+.header .areas{
+  padding:5rpx 10rpx;
+  padding-right: 30px;   
+  height: 24px;
+  font-size: 14px;
+  line-height: 24px;
+  position: relative;
+  display: block;
+}
+.header .jiantou{
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 10rpx;
+  margin: auto;
+  height: 0px;
+  border-top: 6px solid #0E0401;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  transform:rotate(0deg)
+}
+.header .actives{
+   transform:rotate(180deg)
+}
+.header .activess{
+ border: 1px solid #E0DEDE;
+}
+.areasHid{ 
+  position: relative; 
+  float: right;
+  margin-top: -35px;
+  margin-right: 20px;
+  width: 90%;  
+  right: 0;  
+  z-index: 999999999;
+}
+.header_hidden .hid_list .hidd {
+  width: 22%;
+  height: 30px;
+  line-height: 30px;
+  font-size: 12px;
+  border: 1px solid #eee;
+  text-align: center;
+  box-sizing: border-box;  
+  margin-bottom: 10px;
+  margin-right: 4%;
+
+
+}
+/* banner */
+
+
+
+.lunbo .slide-image{
+  width: 100%;
+  height: 100%;
+  background-position:center;
+  background-size: cover;
+
+}
+/* 表单 */
+.form_list{
+  margin-top: 25px;
+  padding: 15px; 
+}
+.form_list .form{
+  width: 100%;
+  height: 100%;
+  border: 2px solid #0E0401;
+  position: relative;
+  padding-top: 30px;
+}
+
+.form_list .form .input{
+  width: 80%;
+  margin: 0 auto;
+   height: 30px; 
+  border: 1px solid #E2E2E2;
+  padding:10rpx 20rpx;
+  background-color: #fff;
+  margin-bottom: 15px;
+  font-size: 14px;  
+}
+
+.form_list .form .yuyues{
+  width: 80%;
+  padding:0 20rpx;
+  margin: 0 auto;
+  margin-bottom:20px;
+  border-radius:0;
+  box-sizing: content-box;
+  font-size: 16px;
+}
+button[plain]{
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.form_name{
+  text-align: center;
+  width: 80%;
+  position: absolute;
+  top: -20rpx;
+  height: 40rpx;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: #fff;
+  z-index: 100;
+}
+.form_name text{
+  font-weight: bold;
+  font-size: 20px;
+}
+.anli{
+  width: 100%;
+  text-align: center;  
+}
+.anli .slide-image {
+  width: 100%;
+  margin-bottom: 20rpx;
+}
+.swiper{
+  height: 350px;
+}
+.swiper swiper-item{
+  background-color: #F2F2F2;
+}
+.anli .jingdian{
+  font-weight: bold;
+  font-size: 20px;
+  padding:20px 0;
+}
+.anli .lunbo_{
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.anli .lunbo_s{
+  font-size: 14px;
+  height: 25px; 
+  border-bottom: 1px solid #E0DEDE;
+}
+.moreanli{
+  background-color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  
+}
+.moreanli .more{
+    width: 60%;
+   height: 40px;
+   line-height: 40px;
+    background: #12B2B2;
+    border-radius: 2px;
+    position: absolute;
+    top: -20px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: #fff;
+    font-size: 14px;
+}
+.moreanli .sheji{
+  padding-top: 30px;
+  font-weight: bold;
+  font-size: 20px;
+}
+/* 设计团队 */
+.team_box{
+  padding: 10px;
+  background: #F2F2F2;
+}
+.team_box .team_lunbo{
+  width: 100%;
+  height: 420px;  
+}
+.team_box .team_lunbo swiper-item{
+  width: 100%;height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: center;
+  font-size: 12px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+.team_box .team_lunbo swiper-item .team_list{
+  width: 48%;
+  height: 180px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.team_lunbo swiper-item .team_list .lunbos{
+  width: 100%;
+  height: 100%;
+}
+.team_lunbo swiper-item .team_list .slide-image{
+  width: 100%;
+  height: 90%;
+  background-position: center;
+  background-size: cover;
+}
+.team_lunbo swiper-item .team_list .lunbo_{
+  overflow: hidden;
+  padding-top: 10rpx;
+}
+.team_lunbo swiper-item .team_list .name{
+  position: absolute;
+  bottom: 10%;
+  width: 100%;
+  color: #fff;  
+  background: rgba(0, 0, 0, 0.6);
+  padding: 5px 0;
+}
+
+.qq{
+  margin: 20px auto;
+  width: 40%;
+  height: 40px;
+  border-radius: 20px;
+  text-align: center;
+  line-height: 40px;
+  background: #12B2B2;
+  color: #fff;
+}

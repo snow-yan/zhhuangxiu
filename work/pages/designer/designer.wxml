@@ -1,0 +1,88 @@
+<!--designer.wxml-->
+<view class="designer">
+    <image src="{{design.img}}" class="avator"></image>
+    <view class="card">
+      <view class="card_name">{{design.title}}</view>
+      <view class="card_name">{{design.city}}|{{design.description}}</view>
+      <view class="card_pro">
+          <view class="city">擅长风格:<text>{{design.styles}}</text> 
+      </view>
+      <view class="pro">
+        <view class="pros">
+          <view class="nub">{{design.count}}</view>
+          <view class="liulan">作品/套</view>
+        </view>
+        <view class="pros">
+        <view class="nub">{{design.author}}</view>
+          <view class="liulan">经验/年</view>
+        </view>
+        <view class="pros">
+          <view class="nub">{{design.view}}</view>
+          <view class="liulan">浏览/次</view>
+        </view>
+        <view class="pros">
+          <view class="nub">{{count}}</view>
+          <view class="liulan">预约/位</view>
+        </view>
+      </view>
+      <view class="yuyue" bindtap="clickAlert">马上预约他</view>   
+      </view>
+    </view>
+</view>
+<view class="xuanxiang">
+  <view class="title" >
+    <view  class="{{sortindex==index?'active':''}}" wx:for="{{chance}}" wx:key="{{index}}" bindtap="click_tab" data-id="{{index}}" data-sortindex="{{index}}">{{item}}</view>   
+  </view>   
+  <view class="home" wx:if="{{sortindex==0}}">
+    <block wx:for="{{anli}}" wx:key="{{index}}">    
+      <view class="">
+
+        <!-- <image src="{{item.workimg}}" class="img"></image> -->
+        <view class="img" style="background-image:url({{item.workimg}})"></view>
+        <view class="floor">{{item.anlititle}}</view>
+        <view class="huxing">户型：<text>{{item.door}}</text>  风格：<text>{{anli.styles}}</text>  面积：<text>{{item.area}}</text></view>
+      </view>  
+    </block>
+  </view>
+  <view class="home" wx:if="{{sortindex==1}}">
+    <view class="">
+      <!-- <image src="../image/case_slide3.jpg" class="img"></image> -->
+      <view class="floor">{{design.title}}</view>
+      <view class="floor">{{design.city}}|{{design.description}}</view>
+      <view class="floor">|  设计理念</view>
+      <view class="huxing">{{design.designidea}}</view>     
+      <view class="floor">|  代表作品</view>
+      <view class="huxing">{{design.works}}</view>
+      <view class="floor">|  个人经历</view>
+      <view class="huxing">{{design.experience}}</view>
+    </view>
+    
+  </view>
+</view>
+
+<!-- 弹窗 -->
+<view class="alert_back" wx:if="{{s==5}}">
+  <view class="alert_box">
+    <view class="price">
+       <view class="">装修报价  </view> 
+         <image src="../image/close.png" class="close" bindtap="closeAlert"> </image>
+    </view>   
+    <form bindsubmit="formSubmit">
+      <input class="inputV" placeholder="联系人" name="name"/>
+      <input class="inputV" placeholder="联系电话" name="telPhone" />
+      <input class="inputV" placeholder="楼盘名称" name="loupan"/>
+      <input class="inputV area" placeholder="建筑面积" name="mianji" /> 
+      <button class="yuyues"  formType="submit">获取报价</button> 
+    </form>
+    <view class="alert_foot">
+      <view >
+        免费电话报价：
+        <text style="font-size:14px;" bindtap="telPhone">{{tel}}</text>
+      </view>
+      <view >
+        已有<text >{{count}}</text>位业主成功获取报价    
+      </view>  
+    </view>
+  </view>
+</view>
+
